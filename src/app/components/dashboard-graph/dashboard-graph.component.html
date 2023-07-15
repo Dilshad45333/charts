@@ -1,0 +1,454 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <i class="bi bi-person" style="color: white; padding-top: 10px"></i>
+        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+
+        <i
+          class="bi bi-wrench-adjustable"
+          style="color: white; padding-top: 10px;padding-left: 15px;"
+        ></i>
+        <a class="nav-link active" href="#">Service Required</a>
+        <i class="bi bi-receipt" style="color: white; padding-top: 10px;padding-left: 15px;"></i>
+        <a class="nav-link active" href="#">Reciepts</a>
+        <i class="bi bi-wifi" style="color: white; padding-top: 10px;padding-left: 15px;"></i>
+        <a class="nav-link active" href="#">Techniques</a>
+        <i class="bi bi-wallet" style="color: white; padding-top: 10px;padding-left: 15px;"></i>
+        <a class="nav-link active" href="#">Withdraw</a>
+        <a class="nav-link" href="#" style="float: right">Profile</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div fxLayout="column" fxLayoutAlign="space-around start">
+  <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+    <div fxFlex="100" style="box-shadow: gray -1px 4px 9px 1px">
+      <app-line-chart></app-line-chart>
+    </div>
+
+    <div
+      fxLayout="column"
+      fxLayoutAlign="space-around center"
+      style="margin-left: 1em"
+    >
+      <div fxFlex="100" style="width: 25em">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title style="font-weight: bold"
+              >Total Service Cost</mat-card-title
+            >
+            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+          </mat-card-header>
+          <hr style="color: gray; width: 100%" />
+          <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-content>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-card-title style="font-weight: bold"
+                  >₹ 270,00</mat-card-title
+                >
+                <mat-card-subtitle
+                  style="
+                    font-weight: bold;
+                    font-size: 10px;
+                    margin-top: 5px;
+                    margin-left: 15px;
+                  "
+                  >This Months</mat-card-subtitle
+                >
+              </div>
+              <div style="width: 80px; height: 80px;background-color:green ;border-radius: 10%;">
+                <img
+                mat-card-image
+                src="./assets/dollar.jpg"
+                style="width: 50px; height: 50px;position: relative;
+                top: 15px;
+                left: 15px;"
+              />
+              </div>
+              
+
+              <!-- <div fxLayoutAlign="end center" mat-card-avatar class="example-header-image" ></div> -->
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div fxFlex="100" style="width: 25em; margin-top: 1em">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title style="font-weight: bold"
+              >Top Service Order</mat-card-title
+            >
+            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+          </mat-card-header>
+          <hr style="color: gray; width: 100%" />
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-content>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-card-title style="font-weight: bold"
+                  >₹ 1922,00</mat-card-title
+                >
+                <mat-card-subtitle
+                  style="
+                    font-weight: bold;
+                    font-size: 10px;
+                    margin-top: 5px;
+                    margin-left: 15px;
+                  "
+                  >This Months</mat-card-subtitle
+                >
+              </div>
+
+              <div style="width: 80px; height: 80px;background-color:yellow ;border-radius: 10%;">
+                <img
+                mat-card-image
+                src="./assets/cusSupport.png"
+                style="width: 50px; height: 50px;position: relative;
+                top: 15px;
+                left: 15px;"
+              />
+              </div>
+              
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div
+    fxFlex="100"
+    fxLayout="row"
+    fxLayoutAlign="space-around center"
+    style="width: 100%; margin-top: 1em"
+  >
+    <div
+      style="box-shadow: gray -1px 4px 9px 1px; width: 22em"
+      fxLayoutAlign="center center"
+    >
+      <mwl-gauge
+        [max]="61700"
+        [dialStartAngle]="-90"
+        [dialEndAngle]="-90.001"
+        [value]="61700"
+        [animated]="true"
+        [animationDuration]="1"
+      >
+      </mwl-gauge>
+    </div>
+    <div
+      fxLayoutAlign="center center"
+      style="box-shadow: gray -1px 4px 9px 1px; width: 22em"
+    >
+      <mwl-gauge
+        [max]="100000"
+        [dialStartAngle]="80"
+        [dialEndAngle]="80"
+        [value]="74900"
+        [animated]="true"
+        [animationDuration]="1"
+      >
+      </mwl-gauge>
+    </div>
+    <div
+      fxLayoutAlign="center center"
+      style="box-shadow: gray -1px 4px 9px 1px; width: 22em"
+    >
+      <mwl-gauge
+        [max]="100000"
+        [dialStartAngle]="80"
+        [dialEndAngle]="-90.001"
+        [value]="25000"
+        [animated]="true"
+        [animationDuration]="1"
+      >
+      </mwl-gauge>
+    </div>
+    <div
+      fxLayoutAlign="center center"
+      style="box-shadow: gray -1px 4px 9px 1px; width: 22em"
+    >
+      <mwl-gauge
+        [max]="100000"
+        [dialStartAngle]="90"
+        [dialEndAngle]="60.001"
+        [value]="57000"
+        [animated]="true"
+        [animationDuration]="1"
+      >
+      </mwl-gauge>
+    </div>
+  </div>
+
+  <div 
+  fxFlex="100"
+  fxLayout="row"
+  fxLayoutAlign="space-around center"
+  style="width: 100%;margin-left: .5em; margin-top: 1em">
+  <div fxFlex="100" style="width: 24em; margin-right: 1em">
+    <mat-card class="example-card">
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div style="width: 90px; height: 90px;background-color: green;border-radius: 50%;">
+                <img
+                mat-card-image
+                src="./assets/database.png"
+                style="width: 60px; height: 60px;
+                position: relative;
+                left: 15px;
+                top: 15px;
+                border-radius: 50%;"
+              />
+            </div>
+           
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-card-title style="font-weight: bold"
+              >₹ 850,00</mat-card-title
+            >
+            <mat-card-subtitle
+              style="
+                font-weight: bold;
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+              "
+              >Payment Due</mat-card-subtitle
+            >
+          </div>
+
+         
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" style="width: 24em; margin-right: 1em">
+    <mat-card class="example-card">
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div style="width: 90px; height: 90px;background-color: red;border-radius: 50%;">
+                <img
+                mat-card-image
+                src="./assets/mail.png"
+                style="width: 60px; height: 60px;
+                position: relative;
+                left: 15px;
+                top: 15px;
+                border-radius: 50%;"
+              />
+            </div>
+           
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-card-title style="font-weight: bold"
+              >₹ 10</mat-card-title
+            >
+            <mat-card-subtitle
+              style="
+                font-weight: bold;
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+              "
+              >Service Request</mat-card-subtitle
+            >
+          </div>
+
+         
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" style="width: 24em; margin-right: 1em">
+    <mat-card class="example-card">
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div style="width: 90px; height: 90px;background-color: rgb(224, 228, 94);border-radius: 50%;">
+                <img
+                mat-card-image
+                src="./assets/wrench.png"
+                style="width: 60px; height: 60px;
+                position: relative;
+                left: 15px;
+                top: 15px;
+                border-radius: 50%;"
+              />
+            </div>
+           
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-card-title style="font-weight: bold"
+              >₹ 129</mat-card-title
+            >
+            <mat-card-subtitle
+              style="
+                font-weight: bold;
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+              "
+              >Todays Services </mat-card-subtitle
+            >
+          </div>
+
+         
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" style="width: 24em; margin-right: 1em">
+    <mat-card class="example-card">
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div style="width: 90px; height: 90px;background-color: rgb(52, 186, 231);border-radius: 50%;">
+                <img
+                mat-card-image
+                src="./assets/smartphone.png"
+                style="width: 60px; height: 60px;
+                position: relative;
+                left: 15px;
+                top: 15px;
+                border-radius: 50%;"
+              />
+            </div>
+           
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-card-title style="font-weight: bold"
+              >₹ 119</mat-card-title
+            >
+            <mat-card-subtitle
+              style="
+                font-weight: bold;
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+              "
+              >Available Services</mat-card-subtitle
+            >
+          </div>
+
+         
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div> 
+  </div>
+
+
+  <div 
+  fxFlex="100"
+  fxLayout="row"
+  fxLayoutAlign="space-around center"
+  style="width: 100%; ">
+  <div fxFlex="100" style="width: 24em;margin-left: .5em; margin-top: 1em;background-color: rgb(3, 5, 51)">
+    <mat-card class="lower-card">
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div style="width: 90px; height: 90px;background-color: rgb(238, 242, 238);border-radius: 50%;">
+                <img
+                mat-card-image
+                src="./assets/car.png"
+                style="width: 60px; height: 60px;
+                position: relative;
+                left: 15px;
+                top: 15px;
+                border-radius: 50%;"
+              />
+            </div>
+           
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-card-title style="font-weight: bold"
+              >₹ 350,00</mat-card-title
+            >
+            <mat-card-subtitle
+              style="
+                font-weight: bold;
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+              "
+              >Car Wash</mat-card-subtitle
+            >
+          </div>
+
+         
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" style="width: 24em;margin-left: 1em; margin-top: 1em;background-color: rgb(53, 214, 225)">
+    <mat-card class="lower-card">
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div style="width: 90px; height: 90px;background-color: rgb(82, 202, 232);border-radius: 50%;">
+                <img
+                mat-card-image
+                src="./assets/steering.png"
+                style="width: 60px; height: 60px;
+                position: relative;
+                left: 15px;
+                top: 15px;
+                border-radius: 50%;"
+              />
+            </div>
+           
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-card-title style="font-weight: bold"
+              >₹ 437,00</mat-card-title
+            >
+            <mat-card-subtitle
+              style="
+                font-weight: bold;
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+              "
+              >Driving Service</mat-card-subtitle
+            >
+          </div>
+
+         
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" style="width: 24em;margin-left: 1em; margin-top: 1em;background-color: rgb(245, 97, 28)">
+    <mat-card class="lower-card">
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div style="width: 90px; height: 90px;background-color: white;border-radius: 50%;">
+                <img
+                mat-card-image
+                src="./assets/car2.png"
+                style="width: 60px; height: 60px;
+                position: relative;
+                left: 15px;
+                top: 15px;
+                border-radius: 50%;"
+              />
+            </div>
+           
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-card-title style="font-weight: bold"
+              >₹ 1922,00</mat-card-title
+            >
+            <mat-card-subtitle
+              style="
+                font-weight: bold;
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+              "
+              >Pub Services </mat-card-subtitle
+            >
+          </div>
+
+         
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+   
+  </div>
+</div>

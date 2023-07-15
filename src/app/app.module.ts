@@ -27,6 +27,13 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { AvatarModule } from 'ngx-avatars';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import {MatCardModule} from '@angular/material/card';
+import { CardComponent } from './components/card/card.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MaterialSpinnerComponent } from './components/material-spinner/material-spinner.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardGraphComponent } from './components/dashboard-graph/dashboard-graph.component';
 
 interface NgxSpinnerConfig {
   type?: string;
@@ -49,7 +56,11 @@ interface NgxSpinnerConfig {
     AgGridComponent,
     SpinnerComponent,
     AvatarComponent,
-    CarouselComponent
+    CarouselComponent,
+    CardComponent,
+    MaterialSpinnerComponent,
+    NavbarComponent,
+    DashboardGraphComponent
   ],
   imports: [
     BrowserModule,
@@ -62,9 +73,13 @@ interface NgxSpinnerConfig {
     FlexLayoutModule ,
     NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
     AvatarModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    TooltipModule.forRoot()
     ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  
 })
 export class AppModule { }

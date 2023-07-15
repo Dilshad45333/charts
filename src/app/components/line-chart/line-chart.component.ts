@@ -26,7 +26,15 @@ export class LineChartComponent {
         fill: true,
         tension: 0.5,
         borderColor: 'black',
-        backgroundColor: 'rgba(255,0,0,0.3)'
+        backgroundColor: '#484eefd4'
+      },
+      {
+        data: [ 60, 69, 30, 82, 46, 95, 40 ],
+        label: 'Series B',
+        fill: true,
+        tension: 0.5,
+        borderColor: 'black',
+        backgroundColor: 'rgba(150,0,0,0.3)'
       }
     ]
   };
